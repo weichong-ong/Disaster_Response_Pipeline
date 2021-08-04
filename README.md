@@ -1,12 +1,12 @@
 # Overview
-This project is part of Data Science Nanodegree Program by Udacity in collaboration with Figure Eight. The dataset contains real messages that were sent during disaster events. The purpose of this project is to build machine learning pipeline, which consists of Natural Language Processing model and Classification model, to categorize these events so that these messages can be sent to an appropriate disaster relief agency. The project will include a web app where an emergency worker can input a new message and get classification results in several categories.
+This project is part of Data Science Nanodegree Program by Udacity in collaboration with [Figure Eight](https://appen.com). The dataset contains real messages that were sent during disaster events. The purpose of this project is to build machine learning pipeline, which consists of Natural Language Processing model and Classification model, to categorize these events so that these messages can be sent to an appropriate disaster relief agency. The project will include a web app where an emergency worker can input a new message and get classification results in several categories.
 
 # Components
-The Project is divided in the following components:
+The project is divided into three components:
 
-1. ETL Pipeline: To load datasets, clean the data and store it in a SQLite database
-2. Machine Learning Pipeline: To build a text processing and machine learning pipeline, train a model to classify text message in categories.
-3. Flask Web App: To show model results in real time.
+1. **ETL Pipeline:** To load datasets, clean the data and store it in a SQLite database
+2. **ML Pipeline:** To build a text processing and machine learning pipeline, train a model to classify text message in categories
+3. **Flask Web App:** To show model results in real time
 
 # Requirements
 - Python 3.8
@@ -38,12 +38,12 @@ The dataset is imbalanced (ie some labels like water have few examples) which co
 # Results
 1. Input message to get classification results
 <p align="center">
-  <img src="/images/message_input.png" height="250" width="800" />
+  <img src="/images/message_input.png" height="200" width="800" />
 </p>
 
 2. The categories which the message belongs to highlighted in green
 <p align="center">
-  <img src="/images/result_example.png" height="600" width="800" />
+  <img src="/images/result_example.png" height="500" width="800" />
 </p>
 
 3. Overview of Training Dataset
