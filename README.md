@@ -38,7 +38,7 @@ The dataset is imbalanced (ie some labels like water have few examples) which co
 # Results
 1. Input message to get classification results
 <p align="center">
-  <img src="/images/message_input.png" height="300" width="800" />
+  <img src="/images/message_input.png" height="250" width="800" />
 </p>
 
 2. The categories which the message belongs to highlighted in green
