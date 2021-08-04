@@ -41,9 +41,9 @@ The dataset is imbalanced (ie some labels like water have few examples) which co
   <img src="/images/message_input.png" height="200" width="800" />
 </p>
 
-2. The categories which the message belongs to highlighted in green
+2. Example: The categories which the message belongs to highlighted in green
 <p align="center">
-  <img src="/images/result_example.png" height="500" width="800" />
+  <img src="/images/result_example.png" height="600" width="800" />
 </p>
 
 3. Overview of Training Dataset
