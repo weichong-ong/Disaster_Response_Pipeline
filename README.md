@@ -4,9 +4,9 @@ This project is part of [Data Science Nanodegree Program by Udacity](https://www
 # Components
 The project is divided into three components:
 
-1. **ETL Pipeline:** To load datasets, clean the data and store it in a SQLite database
-2. **ML Pipeline:** To build a text processing and machine learning pipeline, train a model to classify text message in categories
-3. **Flask Web App:** To show model results in real time
+1. **ETL Pipeline:** Load datasets, clean the data and store it in a SQLite database
+2. **ML Pipeline:** Build a text processing and machine learning pipeline, train a model to classify text message in categories
+3. **Flask Web App:** Show model results in real time
 
 # Requirements
 - Python 3.8
