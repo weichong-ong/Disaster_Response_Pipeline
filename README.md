@@ -1,5 +1,5 @@
 # Overview
-This project is part of Data Science Nanodegree Program by Udacity in collaboration with [Figure Eight](https://appen.com). The dataset contains real messages that were sent during disaster events. The purpose of this project is to build machine learning pipeline, which consists of Natural Language Processing model and Classification model, to categorize these events so that these messages can be sent to an appropriate disaster relief agency. The project will include a web app where an emergency worker can input a new message and get classification results in several categories.
+This project is part of [Data Science Nanodegree Program by Udacity](https://www.udacity.com/course/data-scientist-nanodegree--nd025) in collaboration with [Figure Eight](https://appen.com). The dataset contains real messages that were sent during disaster events. The purpose of this project is to build machine learning pipeline, which consists of Natural Language Processing model and Classification model, to categorize these events so that these messages can be sent to an appropriate disaster relief agency. The project will include a web app where an emergency worker can input a new message and get classification results in several categories.
 
 # Components
 The project is divided into three components:
@@ -34,6 +34,10 @@ The dataset is imbalanced (ie some labels like water have few examples) which co
 <p align="center">
   <img src="/images/classification_report.png" height="600" width="800" />
 </p>
+
+# Acknowledgements
+- [Udacity](https://www.udacity.com) for providing such a interesting and meaningful project
+- [Figure Eight](https://appen.com) for providing real-world dataset 
 
 # Results
 1. Input message to get classification results

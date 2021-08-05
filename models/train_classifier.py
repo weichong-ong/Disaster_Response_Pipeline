@@ -17,8 +17,19 @@ from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.base import BaseEstimator, TransformerMixin
 
-# load data from database
+
 def load_data(database_filepath):
+    '''
+    Load the data from the database
+
+    Args:
+        database_filepath (str): database file's path
+
+    Returns:
+        X (pandas.Series): dataset containing only the messages 
+        y (pandas.DataFrame): dataset containing only the categories
+        category_names (list): list containing the categories name
+    '''
     engine = create_engine('sqlite:///'+database_filepath)
     df = pd.read_sql("SELECT * FROM DisasterResponse", engine)
     X = df['message'].values
@@ -27,6 +38,15 @@ def load_data(database_filepath):
     return X, y, category_names
 
 def tokenize(text):
+    '''
+    Clean and tokenize the text in input
+
+    Args:
+        text (str): input text
+        
+    Returns:
+        clean_tokens (list): tokens obtained from the input text
+    '''
     text = re.sub(r"[^a-zA-Z0-9]", " ", text.lower())
     tokens = word_tokenize(text)
     lemmatizer = WordNetLemmatizer()
@@ -39,7 +59,12 @@ def tokenize(text):
     return clean_tokens
 
 def build_model():
+    '''
+    Build the model using GridSearch CV (Exhaustive search over specified parameter values for an estimator)
 
+    Returns:
+        cv (pipeline.Pipeline): model
+    '''
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer=tokenize)),
         ('tfidf', TfidfTransformer()),
@@ -57,13 +82,36 @@ def build_model():
     return cv
 
 def evaluate_model(y_test, y_pred, category):
+    '''
+    Evaluate the model performances and print the results
+
+    Args:
+        y_test (pandas.DataFrame): test set containing the categories
+        y_pred (pandas.DataFrame): dataframe containing the predicted categories
+        category (str): categories name
+    '''
     clsReport = classification_report(y_test, y_pred, target_names = category, zero_division=1)
     print("Classification report:", clsReport)
 
 def save_model(model, classifier_filepath):
+    '''
+    Save in a pickle file the model
+
+    Args:
+        model (pipeline.Pipeline): model to be saved
+        classifier_filepath (str): classifier (pickle file)'s path
+    '''
     pickle.dump(model, open(classifier_filepath, 'wb'))
 
 def main():
+    '''
+    Train the model and save it in a pickle file
+
+    Args:
+        database_filepath (str): database file's path
+        classifier_filepath (str): classifier (pickle file)'s path
+    '''
+
     if len(sys.argv) == 3:
 
         database_filepath, classifier_filepath = sys.argv[1:]
